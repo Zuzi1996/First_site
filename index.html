@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red And Dark_Test1</title>
+    <link type="text/css" rel="stylesheet" href="reset.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <link rel="shortcut icon" href="./files/imgs/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <section id="banner">
+        <img class="logo" src="./files/imgs/Logo.png" alt="brand logo" >
+
+        <div class="bnr_text">
+            <h1>Welcome To The Site</h1>
+            <p>RaD Alwase Be Ready For You</p>
+
+            <div class="bnr_btn">
+                <a href="#"><span></span> Help</a>
+                <a href="#"><span></span>About Us</a>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="side_nav">
+        <nav>
+            <ul>
+                <li><a href="#banner">HOME</a></li>
+                <li><a href="#book">BOOKs</a></li>
+                <li><a href="#video">VIDEOs</a></li>
+                <li><a href="#service">SERVICEs</a></li>
+                <li><a href="#footer">MEET US</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menu_btn">
+        <img src="./files/imgs/menu.svg" id="menu">
+    </div>
+
+    <!--Book menu-->
+
+    <div id="book">
+        <div class="text">
+            <p>Books</p>
+            <h1>Choose your Book</h1>
+        </div>
+        <div class="book-box">
+            <div class="books">
+                <h1>Trandding Book</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis at molestiae unde. Accusantium aliquam praesentium accusamus ad! Adipisci, nihil ullam cum blanditiis assumenda praesentium nisi voluptas. Veritatis enim fuga aliquam.</p>
+            </div>
+
+            <div class="books-img">
+                <img src="./files/imgs/red-book.jpeg" alt="Trandding book image">
+            </div>
+        </div>
+    </div>
+
+    <!-- vedio -->
+    <div id="video">
+        <div class="text">
+            <p>Videos</p>
+            <h1>Share Your Moments With Us</h1>
+        </div>
+        <div class="video-box">
+            <div class="videos">
+                <img src="./files/imgs/video.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="desc">
+                    <h1>Funny Moment</h1>
+                    <hr>
+                    <p>Share your funny moment with others</p>
+                </div>
+            </div>
+            <div class="videos">
+                <img src="./files/imgs/video.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="desc">
+                    <h1>Book Introduction</h1>
+                    <hr>
+                    <p>Introduce your books to others</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- service -->
+    <div id="service">
+        <div class="text">
+            <p>Services</p>
+            <h1>Services Provided On The Site</h1>
+        </div>
+        <div class="service-row">
+            <div class="service-col">
+                <div class="srv">
+                    <img src="./files/imgs/book-1.jpg" alt="">
+                    <div class="srv-info">
+                        <h4>Jackson</h4>
+                    </div>
+                </div>
+                <a href="#">Be a member of the official libraries.</a>
+            </div>
+            <div class="service-col">
+                <div class="srv">
+                    <img src="./files/imgs/book-2.jpg" alt="">
+                    <div class="srv-info">
+                        <h4>Zuzi</h4>
+                    </div>
+                </div>
+                <a href="#">Instant book delivery service</a>
+            </div>
+            <div class="service-col">
+                <div class="srv">
+                    <img src="./files/imgs/book-3.jpg" alt="">
+                    <div class="srv-info">
+                        <h4>Suzi</h4>
+                    </div>
+                </div>
+                <a href="#">Replace your old books with new books </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="text">
+            <p>Meet Us</p>
+            <h1>We are ready to help you</h1>
+        </div>
+
+        <div class="footer-row">
+            <div class="footer-left">
+                <h1>Opening Hours</h1>
+                <p>Monday To Friday - 08:00am To 04:00pm</p>
+                <p>Saturday - 09:00am To 12:00am</p>
+                <p>Sunday - 09:00am To 10:00am</p>
+            </div>
+
+            <div class="footer-right">
+                <h1>Get in touch</h1>
+                <p>#75, Via Roma, Milan</p>
+                <p>sahelzahra601@gmail.com</p>
+                <p>+98123456789</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var menu_btn = document.getElementById("menu_btn")
+        var menu = document.getElementById("menu")
+        var side_nav = document.getElementById("side_nav")
+
+        side_nav.style.right = "-150px"
+        menu_btn.onclick = function() {
+            if(side_nav.style.right == "-150px") {
+                side_nav.style.right = (0)
+                menu.src = "files/imgs/close.svg";
+            }
+            else{
+                side_nav.style.right = "-150px"
+                menu.src = "files/imgs/menu.svg";
+            }
+        }
+        var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 500,
+        speedAsDuration: true
+        });
+    </script>
+
+</body>
+</html>
